@@ -30,7 +30,7 @@ public class LabWork {
         hobbyItems.add("Fish tank");
         hobbyItems.add("Telescope");
         hobbyItems.add("microphone");
-        
+        // old style 
         System.out.println("Hobby Item List orginal: ");
         for(int i=0; i < hobbyItems.size(); i++) {
             String s = (String)hobbyItems.get(i);
@@ -41,7 +41,7 @@ public class LabWork {
         hobbyItems.add("pickaxe");
         
         System.out.println("Hobby Item List with additions: ");
-        
+        // new style using object as a
         for (Object hobbyItem : hobbyItems) {
             String s = (String) hobbyItem;
             System.out.println(s);
@@ -77,6 +77,7 @@ public class LabWork {
         
         for (Employee e : employeeList){
             System.out.println(e.getSsn());
+            System.out.println(e.toString());
         }
         
         System.out.println("********************* CHALLENGE 3 ************************");
@@ -85,6 +86,20 @@ public class LabWork {
         
         twoObjectList.add(new Employee("Wintermyer", "Drew", "1111111111"));
         twoObjectList.add(new Dog("The Scamp", 12345));
+        
+        for(int i = 0; i < twoObjectList.size(); i++){
+            Object obj = twoObjectList.get(i);
+            if(obj instanceof Employee){
+                Employee e = (Employee)obj;
+                System.out.println(e);
+            }
+            if(obj instanceof Dog){
+                Dog d = (Dog)obj;
+                System.out.println(d);
+            }
+        }
+        
+        
         
         for (Object e : twoObjectList){
             System.out.println(e.toString());
