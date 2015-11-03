@@ -122,6 +122,8 @@ public class LabWork {
         Set noDupes = new HashSet(employeeList1);
         
         employeeList1 = new ArrayList(noDupes);
+        noDupes = null;
+        
         System.out.println("Used a set to remove dupes.");
         for( Employee e : employeeList1){
             System.out.println(e.toString());
